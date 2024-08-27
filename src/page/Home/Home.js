@@ -1,1315 +1,615 @@
-import React from "react";
-export default function Home() {
+  import React from 'react'
+  export default function Home() {
   return (
-    <div>
-      {/* Spinner Start */}
-      {/* <div
-        id="spinner"
-        className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div
-          className="spinner-border text-primary"
-          style={{ width: "3rem", height: "3rem" }}
-          role="status"
-        >
-          <span className="sr-only">Loading...</span>
+  <div className="theme-layout">
+    <div className="responsive-header">
+      <div className="logo res"><img src="images/logo.png" alt /><span>Socimo</span></div>
+      <div className="user-avatar mobile">
+        <a href="profile.html" title="View Profile"><img alt src="images/resources/user.jpg" /></a>
+        <div className="name">
+          <h4>Danial Cardos</h4>
+          <span>Ontario, Canada</span>
         </div>
-      </div> */}
-      {/* Spinner End */}
-      {/* Navbar & Hero Start */}
-      <div className="container-fluid header position-relative overflow-hidden p-0">
-        <nav className="navbar navbar-expand-lg fixed-top navbar-light px-4 px-lg-5 py-3 py-lg-0">
-          <a href="index.html" className="navbar-brand p-0">
-            <h1 className="display-6 text-primary m-0">
-              <i className="fas fa-envelope me-3" />
-              Mailler
-            </h1>
-            {/* <img src="img/logo.png" alt="Logo"> */}
+      </div>
+      <div className="right-compact">
+        <div className="sidemenu">
+          <i>
+            <svg id="side-menu2" xmlns="http://www.w3.org/2000/svg" width={26} height={26} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu"><line x1={3} y1={12} x2={21} y2={12} /><line x1={3} y1={6} x2={21} y2={6} /><line x1={3} y1={18} x2={21} y2={18} /></svg></i>
+        </div>
+        <div className="res-search">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-search"><circle cx={11} cy={11} r={8} /><line x1={21} y1={21} x2="16.65" y2="16.65" /></svg></span>
+        </div>
+      </div>
+      <div className="restop-search">
+        <span className="hide-search"><i className="icofont-close-circled" /></span>
+        <form method="post">
+          <input type="text" placeholder="Search..." />
+        </form>
+      </div>
+    </div>{/* responsive header */}
+    <header className="transparent">
+      <div className="topbar">
+        <div className="logo"><img src="images/logo.png" alt /><span>Socimo</span></div>
+        <div className="searches">
+          <form method="post">
+            <input type="text" placeholder="Search..." />
+            <button type="submit"><i className="icofont-search" /></button>
+            <span className="cancel-search"><i className="icofont-close" /></span>
+            <div className="recent-search">
+              <h4 className="recent-searches">Your's Recent Search</h4>
+              <ul className="so-history">
+                <li>
+                  <div className="searched-user">
+                    <figure><img src="images/resources/user1.jpg" alt /></figure>
+                    <span>Danial Carabal</span>
+                  </div>
+                  <span className="trash"><i className="icofont-close-circled" /></span>
+                </li>
+                <li>
+                  <div className="searched-user">
+                    <figure><img src="images/resources/user2.jpg" alt /></figure>
+                    <span>Maria K</span>
+                  </div>
+                  <span className="trash"><i className="icofont-close-circled" /></span>
+                </li>
+                <li>
+                  <div className="searched-user">
+                    <figure><img src="images/resources/user3.jpg" alt /></figure>
+                    <span>Fawad Khan</span>
+                  </div>
+                  <span className="trash"><i className="icofont-close-circled" /></span>
+                </li>
+                <li>
+                  <div className="searched-user">
+                    <figure><img src="images/resources/user4.jpg" alt /></figure>
+                    <span>Danial Sandos</span>
+                  </div>
+                  <span className="trash"><i className="icofont-close-circled" /></span>
+                </li>
+                <li>
+                  <div className="searched-user">
+                    <figure><img src="images/resources/user5.jpg" alt /></figure>
+                    <span>Jack Carter</span>
+                  </div>
+                  <span className="trash"><i className="icofont-close-circled" /></span>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <ul>
+          <li><a className="join-butn" href="feed.html" title>Today's Newsfeed</a></li>
+          <li><a href="#" title>help</a></li>
+          <li><a href="#" title><img src="images/flags/US.png" alt /></a></li>
+          <li><a href="sign-in.html" title>Login / Register</a></li>
+        </ul>
+      </div>
+    </header>
+    <nav className="sidebar">
+      <ul className="menu-slide">
+        <li className="active menu-item-has-children">
+          <a className href="#" title>
+            <i><svg id="icon-home" className="feather feather-home" strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" height={14} width={14} xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg></i> Home
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span className="fa fa-bars" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarCollapse">
-            <div className="navbar-nav ms-auto py-0">
-              <a href="index.html" className="nav-item nav-link active">
-                Home
-              </a>
-              <a href="about.html" className="nav-item nav-link">
-                About
-              </a>
-              <a href="service.html" className="nav-item nav-link">
-                Services
-              </a>
-              <div className="nav-item dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
-                  Pages
-                </a>
-                <div className="dropdown-menu m-0">
-                  <a href="feature.html" className="dropdown-item">
-                    Features
-                  </a>
-                  <a href="pricing.html" className="dropdown-item">
-                    Pricing
-                  </a>
-                  <a href="blog.html" className="dropdown-item">
-                    Blog
-                  </a>
-                  <a href="testimonial.html" className="dropdown-item">
-                    Testimonial
-                  </a>
-                  <a href="404.html" className="dropdown-item">
-                    404 Page
-                  </a>
-                </div>
-              </div>
-              <a href="contact.html" className="nav-item nav-link">
-                Contact Us
-              </a>
-            </div>
-            <a
-              href="#"
-              className="btn btn-light border border-primary rounded-pill text-primary py-2 px-4 me-4"
-            >
-              Log In
-            </a>
-            <a
-              href="#"
-              className="btn btn-primary rounded-pill text-white py-2 px-4"
-            >
-              Sign Up
-            </a>
-          </div>
-        </nav>
-        {/* Hero Header Start */}
-        <div className="hero-header overflow-hidden px-5">
-          <div className="rotate-img">
-            <img src="img/sty-1.png" className="img-fluid w-100" alt />
-            <div className="rotate-sty-2" />
-          </div>
-          <div className="row gy-5 align-items-center">
-            <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-              <h1
-                className="display-4 text-dark mb-4 wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                Turn Emails into Revenue
-              </h1>
-              <p className="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">
-                Win new customers with the #1 email marketing and automations
-                brand* that recommends ways to get more opens, clicks, and
-                sales.
-              </p>
-              <a
-                href="#"
-                className="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp"
-                data-wow-delay="0.7s"
-              >
-                Get Started
-              </a>
-            </div>
-            <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-              <img
-                src="img/hero-img-1.png"
-                className="img-fluid w-100 h-100"
-                alt
-              />
-            </div>
-          </div>
+          <ul className="submenu">
+            <li><a href="index.html" title>Newsfeed</a></li>
+            <li><a href="company-home.html" title>Company Home</a></li>
+            <li><a href="profile-page2.html" title>User Profile</a></li>
+            <li><a href="profile.html" title>Student User Profile</a></li>
+            <li><a href="groups.html" title>Groups</a></li>
+            <li><a href="group-detail.html" title>Group Detail</a></li>
+            <li><a href="post-detail.html" title>Social Post Detail</a></li>
+            <li><a href="messages.html" title>Chat/Messages</a></li>
+            <li><a href="notifications.html" title>Notificatioins</a></li>
+            <li><a href="search-result.html" title>Search Result</a></li>
+          </ul>
+        </li>
+        <li className="menu-item-has-children">
+          <a className href="#" title>
+            <i className><svg id="ab7" className="feather feather-zap" strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" height={14} width={14} xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg></i> Features
+          </a>
+          <ul className="submenu">
+            <li><a href="videos.html" title>Videos</a></li>
+            <li><a href="live-stream.html" title>Live Stream</a></li>
+            <li><a href="event-page.html" title>Events Page</a></li>
+            <li><a href="event-detail.html" title>Event Detail</a></li>
+            <li><a href="Q-A.html" title>QA</a></li>
+            <li><a href="Q-detail.html" title>QA Detail</a></li>
+            <li><a href="help-faq.html" title>Support Help</a></li>
+            <li><a href="help-faq-detail.html" title>Support Detail</a></li>
+          </ul>
+        </li>
+        <li className="menu-item-has-children">
+          <a className href="#" title>
+            <i className>
+              <svg id="ab5" xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1={3} y1={6} x2={21} y2={6} /><path d="M16 10a4 4 0 0 1-8 0" /></svg></i> Market Place
+          </a>
+          <ul className="submenu">
+            <li><a href="books.html" title>Books</a></li>
+            <li><a href="book-detail.html" title>Books Detail</a></li>
+            <li><a href="courses.html" title>Course</a></li>
+            <li><a href="course-detail.html" title>course Detail</a></li>
+            <li><a href="add-new-course.html" title>Add New Course</a></li>
+            <li><a href="product-cart.html" title>Cart Page</a></li>
+            <li><a href="product-checkout.html" title>Checkout</a></li>
+            <li><a href="add-credits.html" title>Add Credit</a></li>
+            <li><a href="pay-out.html" title>Payouts</a></li>
+            <li><a href="price-plan.html" title>Pricing Plans</a></li>
+            <li><a href="invoice.html" title>Invoice</a></li>
+            <li><a href="thank-you.html" title>Thank you Page</a></li>
+          </ul>
+        </li>
+        <li className="menu-item-has-children">
+          <a className href="#" title>
+            <i className><svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1={6} y1={1} x2={6} y2={4} /><line x1={10} y1={1} x2={10} y2={4} /><line x1={14} y1={1} x2={14} y2={4} /></svg>
+            </i> Blogs
+          </a>
+          <ul className="submenu">
+            <li><a href="blog.html" title>Blog</a></li>
+            <li><a href="blog-detail.html" title>Blog Detail</a></li>
+          </ul>
+        </li>
+        <li className="menu-item-has-children">
+          <a className href="#" title>
+            <i><svg id="ab8" className="feather feather-file" strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" height={14} width={14} xmlns="http://www.w3.org/2000/svg"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" /></svg></i> Featured Pages
+          </a>
+          <ul className="submenu">
+            <li><a href="404.html" title>Error 404</a></li>
+            <li><a href="coming-soon.html" title>Coming Soon</a></li>
+            <li><a href="send-feedback.html" title>Send Feedback</a></li>
+            <li><a href="badges.html" title>Badges</a></li>
+            <li><a href="thank-you.html" title>Thank You</a></li>
+          </ul>
+        </li>
+        <li className="menu-item-has-children">
+          <a className href="#" title>
+            <i className>
+              <svg id="ab9" xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-lock"><rect x={3} y={11} width={18} height={11} rx={2} ry={2} /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></i> Authentications
+          </a>
+          <ul className="submenu">
+            <li><a href="sign-in.html" title>Sign In</a></li>
+            <li><a href="signup.html" title>Sign Up</a></li>
+            <li><a href="forgot-password.html" title>Forgot Password</a></li>
+          </ul>
+        </li>
+        <li className>
+          <a className href="about-university.html" title>
+            <i><svg id="ab1" className="feather feather-users" strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" height={14} width={14} xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle r={4} cy={7} cx={9} /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></i> University Profile
+          </a>
+        </li>
+        <li className>
+          <a className href="messages.html" title>
+            <i className>
+              <svg className="feather feather-message-square" strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" height={14} width={14} xmlns="http://www.w3.org/2000/svg" id="ab2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" style={{strokeDasharray: '68, 88', strokeDashoffset: 0}} /></svg></i> Live Chat
+          </a>
+        </li>
+        <li className>
+          <a className href="privacy-n-policy.html" title><i className>
+              <svg id="ab4" xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" /><polygon points="12 15 17 21 7 21 12 15" /></svg></i> Privacy Polices
+          </a>
+        </li>
+        <li className>
+          <a className href="settings.html" title><i className>
+              <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-settings"><circle cx={12} cy={12} r={3} /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg></i> Web Settings
+          </a>
+        </li>
+        <li className="menu-item-has-children">
+          <a className="#" href="#" title>
+            <i className>
+              <svg id="team" xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-smile"><circle cx={12} cy={12} r={10} /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1={9} y1={9} x2="9.01" y2={9} /><line x1={15} y1={9} x2="15.01" y2={9} /></svg></i> Development Tools
+          </a>
+          <ul className="submenu">
+            <li><a href="widgets.html" title>Widgets Collection</a></li>
+            <li><a href="development-component.html" title>Web Component</a></li>
+            <li><a href="development-elements.html" title>Web Elements</a></li>
+            <li><a href="loader-spiners.html" title>Loader Spiners</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>{/* nav sidebar */}
+    <section>
+      <div className="gap overlap nogap mate-black low-opacity">
+        <div className="bg-image" style={{backgroundImage: 'url(images/resources/slider3.jpg)'}} />
+        <div className="feature-meta">
+          <h1>Discover Your <span>Scientific</span> Knowledge</h1>
+          <h3>and stay connected with <span /></h3>
+          <a href="#" title className="main-btn" data-ripple>Join Free</a>
         </div>
-        {/* Hero Header End */}
-      </div>
-      {/* Navbar & Hero End */}
-      {/* About Start */}
-      <div
-        className="container-fluid overflow-hidden py-5"
-        style={{ marginTop: "6rem" }}
-      >
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div className="RotateMoveLeft">
-                <img src="img/about-1.png" className="img-fluid w-100" alt />
-              </div>
-            </div>
-            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-              <h4 className="mb-1 text-primary">About Us</h4>
-              <h1 className="display-5 mb-4">
-                Get Started Easily With a Personalized Product Tour
-              </h1>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusantium, suscipit itaque quaerat dicta porro illum, autem,
-                molestias ut animi ab aspernatur dolorum officia nam dolore.
-                Voluptatibus aliquam earum labore atque.
-              </p>
-              <a href="#" className="btn btn-primary rounded-pill py-3 px-5">
-                About More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* About End */}
-      {/* Service Start */}
-      <div className="container-fluid service py-5">
-        <div className="container py-5">
-          <div
-            className="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: 900 }}
-          >
-            <h4 className="mb-1 text-primary">Our Service</h4>
-            <h1 className="display-5 mb-4">What We Can Do For You</h1>
-            <p className="mb-0">
-              Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae
-              maxime. Vel animi eveniet doloremque reiciendis soluta iste
-              provident non rerum illum perferendis earum est architecto dolores
-              vitae quia vero quod incidunt culpa corporis, porro doloribus.
-              Voluptates nemo doloremque cum.
-            </p>
-          </div>
-          <div className="row g-4 justify-content-center">
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-mail-bulk fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Email Newsletters</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-thumbs-up fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Acquistion Emails </h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fa fa-subway fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Retention Emails</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-sitemap fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Promotional Emails</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-mail-bulk fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Email Newsletters</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-thumbs-up fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Acquistion Emails </h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fa fa-subway fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Retention Emails</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="service-item text-center rounded p-4">
-                <div className="service-icon d-inline-block bg-light rounded p-4 mb-4">
-                  <i className="fas fa-sitemap fa-5x text-secondary" />
-                </div>
-                <div className="service-content">
-                  <h4 className="mb-4">Promotional Emails</h4>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-light rounded-pill text-primary py-2 px-4"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Service End */}
-      {/* Feature Start */}
-      <div className="container-fluid feature overflow-hidden py-5">
-        <div className="container py-5">
-          <div
-            className="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: 900 }}
-          >
-            <h4 className="text-primary">Our Feature</h4>
-            <h1 className="display-5 mb-4">
-              Important Features For Email Marketing
-            </h1>
-            <p className="mb-0">
-              Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae
-              maxime. Vel animi eveniet doloremque reiciendis soluta iste
-              provident non rerum illum perferendis earum est architecto dolores
-              vitae quia vero quod incidunt culpa corporis, porro doloribus.
-              Voluptates nemo doloremque cum.
-            </p>
-          </div>
-          <div className="row g-4 justify-content-center text-center mb-5">
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="text-center p-4">
-                <div className="d-inline-block rounded bg-light p-4 mb-4">
-                  <i className="fas fa-envelope fa-5x text-secondary" />
-                </div>
-                <div className="feature-content">
-                  <a href="#" className="h4">
-                    Email Marketing <i className="fa fa-long-arrow-alt-right" />
-                  </a>
-                  <p className="mt-4 mb-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="text-center p-4">
-                <div className="d-inline-block rounded bg-light p-4 mb-4">
-                  <i className="fas fa-mail-bulk fa-5x text-secondary" />
-                </div>
-                <div className="feature-content">
-                  <a href="#" className="h4">
-                    Email Builder <i className="fa fa-long-arrow-alt-right" />
-                  </a>
-                  <p className="mt-4 mb-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="text-center rounded p-4">
-                <div className="d-inline-block rounded bg-light p-4 mb-4">
-                  <i className="fas fa-sitemap fa-5x text-secondary" />
-                </div>
-                <div className="feature-content">
-                  <a href="#" className="h4">
-                    Customer Builder{" "}
-                    <i className="fa fa-long-arrow-alt-right" />
-                  </a>
-                  <p className="mt-4 mb-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="text-center rounded p-4">
-                <div className="d-inline-block rounded bg-light p-4 mb-4">
-                  <i className="fas fa-tasks fa-5x text-secondary" />
-                </div>
-                <div className="feature-content">
-                  <a href="#" className="h4">
-                    Campaign Manager{" "}
-                    <i className="fa fa-long-arrow-alt-right" />
-                  </a>
-                  <p className="mt-4 mb-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.consectetur adipisicing elit
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 wow fadeInUp" data-wow-delay="0.1s">
-              <div className="my-3">
-                <a
-                  href="#"
-                  className="btn btn-primary d-inline rounded-pill px-5 py-3"
-                >
-                  More Features
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="row g-5 pt-5" style={{ marginTop: "6rem" }}>
-            <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-              <div
-                className="feature-img RotateMoveLeft h-100"
-                style={{ objectFit: "cover" }}
-              >
-                <img
-                  src="img/features-1.png"
-                  className="img-fluid w-100 h-100"
-                  alt
-                />
-              </div>
-            </div>
-            <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
-              <h4 className="text-primary">Fearutes</h4>
-              <h1 className="display-5 mb-4">
-                Push Your Visitors Into Happy Customers
-              </h1>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusantium, suscipit itaque quaerat dicta porro illum, autem,
-                molestias ut animi ab aspernatur dolorum officia nam dolore.
-                Voluptatibus aliquam earum labore atque.
-              </p>
-              <div className="row g-4">
-                <div className="col-6">
-                  <div className="d-flex">
-                    <i className="fas fa-newspaper fa-4x text-secondary" />
-                    <div className="d-flex flex-column ms-3">
-                      <h2 className="mb-0 fw-bold">285</h2>
-                      <small className="text-dark">Created Projects</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="d-flex">
-                    <i className="fas fa-users fa-4x text-secondary" />
-                    <div className="d-flex flex-column ms-3">
-                      <h2 className="mb-0 fw-bold">6560</h2>
-                      <small className="text-dark">Happy Clients</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="my-4">
-                <a href="#" className="btn btn-primary rounded-pill py-3 px-5">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Feature End */}
-      {/* FAQ Start */}
-      <div className="container-fluid FAQ bg-light overflow-hidden py-5">
-        <div className="container py-5">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-              <div className="accordion" id="accordionExample">
-                <div className="accordion-item border-0 mb-4">
-                  <h2 className="accordion-header" id="headingOne">
-                    <button
-                      className="accordion-button rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne"
-                    >
-                      Why did you choose Our Email Services?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    className="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body my-2">
-                      <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ad nemo impedit, sapiente quis illo quia nulla atque
-                        maxime fuga minima ipsa quae cum consequatur, sit,
-                        delectus exercitationem odit officiis maiores! Neque,
-                        quidem corrupti modi architecto eos saepe incidunt
-                        dignissimos rerum.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dicta distinctio hic fuga odio excepturi ducimus sequi
-                        at. Doloribus, non aspernatur.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item border-0 mb-4">
-                  <h2 className="accordion-header" id="headingTwo">
-                    <button
-                      className="accordion-button collapsed rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Are there any hidden charges?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body my-2">
-                      <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ad nemo impedit, sapiente quis illo quia nulla atque
-                        maxime fuga minima ipsa quae cum consequatur, sit,
-                        delectus exercitationem odit officiis maiores! Neque,
-                        quidem corrupti modi architecto eos saepe incidunt
-                        dignissimos rerum.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dicta distinctio hic fuga odio excepturi ducimus sequi
-                        at. Doloribus, non aspernatur.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item border-0">
-                  <h2 className="accordion-header" id="headingThree">
-                    <button
-                      className="accordion-button collapsed rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      What are the key challenges of email marketing?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body my-2">
-                      <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ad nemo impedit, sapiente quis illo quia nulla atque
-                        maxime fuga minima ipsa quae cum consequatur, sit,
-                        delectus exercitationem odit officiis maiores! Neque,
-                        quidem corrupti modi architecto eos saepe incidunt
-                        dignissimos rerum.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dicta distinctio hic fuga odio excepturi ducimus sequi
-                        at. Doloribus, non aspernatur.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-              <div className="FAQ-img RotateMoveRight rounded">
-                <img src="img/about-1.png" className="img-fluid w-100" alt />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* FAQ End */}
-      {/* Pricing Start */}
-      <div className="container-fluid price py-5">
-        <div className="container py-5">
-          <div
-            className="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: 900 }}
-          >
-            <h4 className="text-primary">Pricing Plan</h4>
-            <h1 className="display-5 mb-4">Not Sure Which Plan Is For You?</h1>
-            <p className="mb-0">
-              Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae
-              maxime. Vel animi eveniet doloremque reiciendis soluta iste
-              provident non rerum illum perferendis earum est architecto dolores
-              vitae quia vero quod incidunt culpa corporis, porro doloribus.
-              Voluptates nemo doloremque cum.
-            </p>
-          </div>
-          <div className="row g-5 justify-content-center">
-            <div
-              className="col-md-6 col-lg-6 col-xl-4 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="price-item bg-light rounded text-center">
-                <div
-                  className="text-center text-dark border-bottom d-flex flex-column justify-content-center p-4"
-                  style={{ width: "100%", height: 160 }}
-                >
-                  <p className="fs-2 fw-bold text-uppercase mb-0">BASIC</p>
-                  <div className="d-flex justify-content-center">
-                    <strong className="align-self-start">$</strong>
-                    <p className="mb-0">
-                      <span className="display-5">00</span>/mo
-                    </p>
-                  </div>
-                </div>
-                <div className="text-start p-5">
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Limited
-                    Acess Library
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Customer
-                    Support
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Pre-built
-                    Email Templates
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Reporting
-                    &amp; Analytics
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Forms &amp;
-                    Landing Pages
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> A/B Testing
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Email
-                    Scheduling
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Automated
-                    Customer Journeys
-                  </p>
-                  <p>
-                    <i className="fas fa-times text-danger me-1" /> Creative
-                    Assistant
-                  </p>
-                  <p className="mb-4">
-                    <i className="fas fa-times text-danger me-1" /> Role-based
-                    Access
-                  </p>
-                  <button
-                    className="btn btn-light rounded-pill py-2 px-5"
-                    type="button"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-6 col-xl-4 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="price-item bg-light rounded text-center">
-                <div className="pice-item-offer">Popular</div>
-                <div
-                  className="text-center text-primary border-bottom d-flex flex-column justify-content-center p-4"
-                  style={{ width: "100%", height: 160 }}
-                >
-                  <p className="fs-2 fw-bold text-uppercase mb-0">Standard</p>
-                  <div className="d-flex justify-content-center">
-                    <strong className="align-self-start">$</strong>
-                    <p className="mb-0">
-                      <span className="display-5">23</span>/mo
-                    </p>
-                  </div>
-                </div>
-                <div className="text-start p-5">
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Limited
-                    Acess Library
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Customer
-                    Support
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Pre-built
-                    Email Templates
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Reporting
-                    &amp; Analytics
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Forms &amp;
-                    Landing Pages
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> A/B Testing
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Email
-                    Scheduling
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Automated
-                    Customer Journeys
-                  </p>
-                  <p>
-                    <i className="fas fa-times text-danger me-1" /> Creative
-                    Assistant
-                  </p>
-                  <p className="mb-4">
-                    <i className="fas fa-times text-danger me-1" /> Role-based
-                    Access
-                  </p>
-                  <button
-                    className="btn btn-light rounded-pill py-2 px-5"
-                    type="button"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-6 col-xl-4 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="price-item bg-light rounded text-center">
-                <div
-                  className="text-center text-secondary border-bottom d-flex flex-column justify-content-center p-4"
-                  style={{ width: "100%", height: 160 }}
-                >
-                  <p className="fs-2 fw-bold text-uppercase mb-0">Premium</p>
-                  <div className="d-flex justify-content-center">
-                    <strong className="align-self-start">$</strong>
-                    <p className="mb-0">
-                      <span className="display-5">49</span>/mo
-                    </p>
-                  </div>
-                </div>
-                <div className="text-start p-5">
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Limited
-                    Acess Library
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Customer
-                    Support
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Pre-built
-                    Email Templates
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Reporting
-                    &amp; Analytics
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Forms &amp;
-                    Landing Pages
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> A/B Testing
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Email
-                    Scheduling
-                  </p>
-                  <p>
-                    <i className="fas fa-check text-success me-1" /> Automated
-                    Customer Journeys
-                  </p>
-                  <p>
-                    <i className="fas fa-times text-danger me-1" /> Creative
-                    Assistant
-                  </p>
-                  <p className="mb-4">
-                    <i className="fas fa-times text-danger me-1" /> Role-based
-                    Access
-                  </p>
-                  <button
-                    className="btn btn-light rounded-pill py-2 px-5"
-                    type="button"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Pricing End */}
-      {/* Blog Start */}
-      <div className="container-fluid blog py-5">
-        <div className="container py-5">
-          <div
-            className="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: 900 }}
-          >
-            <h4 className="text-primary">Our Blog</h4>
-            <h1 className="display-5 mb-4">Join Us For New Blog</h1>
-            <p className="mb-0">
-              Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae
-              maxime. Vel animi eveniet doloremque reiciendis soluta iste
-              provident non rerum illum perferendis earum est architecto dolores
-              vitae quia vero quod incidunt culpa corporis, porro doloribus.
-              Voluptates nemo doloremque cum.
-            </p>
-          </div>
-          <div className="row g-4 justify-content-center">
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="blog-item">
-                <div className="blog-img">
-                  <img src="img/blog-1.png" className="img-fluid w-100" alt />
-                  <div className="blog-info">
-                    <span>
-                      <i className="fa fa-clock" /> Dec 01.2024
-                    </span>
-                    <div className="d-flex">
-                      <span className="me-3">
-                        {" "}
-                        3 <i className="fa fa-heart" />
-                      </span>
-                      <a href="#" className="text-white">
-                        0 <i className="fa fa-comment" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="blog-content text-dark border p-4 ">
-                  <h5 className="mb-4">
-                    Dolor, sit amet consectetur adipisicing
-                  </h5>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectur adip sed eiusmod amet
-                    consectur adip.
-                  </p>
-                  <a className="btn btn-light rounded-pill py-2 px-4" href="#">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="blog-item">
-                <div className="blog-img">
-                  <img src="img/blog-2.png" className="img-fluid w-100" alt />
-                  <div className="blog-info">
-                    <span>
-                      <i className="fa fa-clock" /> Dec 01.2024
-                    </span>
-                    <div className="d-flex">
-                      <span className="me-3">
-                        {" "}
-                        3 <i className="fa fa-heart" />
-                      </span>
-                      <a href="#" className="text-white">
-                        0 <i className="fa fa-comment" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="blog-content text-dark border p-4 ">
-                  <h5 className="mb-4">
-                    Dolor, sit amet consectetur adipisicing
-                  </h5>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectur adip sed eiusmod amet
-                    consectur adip.
-                  </p>
-                  <a className="btn btn-light rounded-pill py-2 px-4" href="#">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="blog-item">
-                <div className="blog-img">
-                  <img src="img/blog-3.png" className="img-fluid w-100" alt />
-                  <div className="blog-info">
-                    <span>
-                      <i className="fa fa-clock" /> Dec 01.2024
-                    </span>
-                    <div className="d-flex">
-                      <span className="me-3">
-                        {" "}
-                        3 <i className="fa fa-heart" />
-                      </span>
-                      <a href="#" className="text-white">
-                        0 <i className="fa fa-comment" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="blog-content text-dark border p-4 ">
-                  <h5 className="mb-4">
-                    Dolor, sit amet consectetur adipisicing
-                  </h5>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectur adip sed eiusmod amet
-                    consectur adip.
-                  </p>
-                  <a className="btn btn-light rounded-pill py-2 px-4" href="#">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="blog-item">
-                <div className="blog-img">
-                  <img src="img/blog-4.png" className="img-fluid w-100" alt />
-                  <div className="blog-info">
-                    <span>
-                      <i className="fa fa-clock" /> Dec 01.2024
-                    </span>
-                    <div className="d-flex">
-                      <span className="me-3">
-                        {" "}
-                        3 <i className="fa fa-heart" />
-                      </span>
-                      <a href="#" className="text-white">
-                        0 <i className="fa fa-comment" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="blog-content text-dark border p-4 ">
-                  <h5 className="mb-4">
-                    Dolor, sit amet consectetur adipisicing
-                  </h5>
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectur adip sed eiusmod amet
-                    consectur adip.
-                  </p>
-                  <a className="btn btn-light rounded-pill py-2 px-4" href="#">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Blog End */}
-      {/* Testimonial Start */}
-      <div className="container-fluid testimonial py-5">
-        <div className="container py-5">
-          <div
-            className="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: 900 }}
-          >
-            <h4 className="text-primary">Testimonial</h4>
-            <h1 className="display-5 mb-4">What Our Client Say About Us</h1>
-            <p className="mb-0">
-              Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae
-              maxime. Vel animi eveniet doloremque reiciendis soluta iste
-              provident non rerum illum perferendis earum est architecto dolores
-              vitae quia vero quod incidunt culpa corporis, porro doloribus.
-              Voluptates nemo doloremque cum.
-            </p>
-          </div>
-          <div
-            className="testimonial-carousel owl-carousel wow zoomInDown"
-            data-wow-delay="0.2s"
-          >
-            <div
-              className="testimonial-item"
-              data-dot="<img class='img-fluid' src='img/testimonial-img-1.jpg' alt=''>"
-            >
-              <div className="testimonial-inner text-center p-5">
-                <div className="d-flex align-items-center justify-content-center mb-4">
-                  <div
-                    className="testimonial-inner-img border border-primary border-3 me-4"
-                    style={{ width: 100, height: 100, borderRadius: "50%" }}
-                  >
-                    <img
-                      src="img/testimonial-img-1.jpg"
-                      className="img-fluid rounded-circle"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <h5 className="mb-2">John Abraham</h5>
-                    <p className="mb-0">New York, USA</p>
-                  </div>
-                </div>
-                <p className="fs-7">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Asperiores nemo facilis tempora esse explicabo sed!
-                  Dignissimos quia ullam pariatur blanditiis sed voluptatum.
-                  Totam aut quidem laudantium tempora. Minima, saepe earum!
-                </p>
-                <div className="text-center">
-                  <div className="d-flex justify-content-center">
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="testimonial-item"
-              data-dot="<img class='img-fluid' src='img/testimonial-img-2.jpg' alt=''>"
-            >
-              <div className="testimonial-inner text-center p-5">
-                <div className="d-flex align-items-center justify-content-center mb-4">
-                  <div
-                    className="testimonial-inner-img border border-primary border-3 me-4"
-                    style={{ width: 100, height: 100, borderRadius: "50%" }}
-                  >
-                    <img
-                      src="img/testimonial-img-2.jpg"
-                      className="img-fluid rounded-circle"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <h5 className="mb-2">John Abraham</h5>
-                    <p className="mb-0">New York, USA</p>
-                  </div>
-                </div>
-                <p className="fs-7">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Asperiores nemo facilis tempora esse explicabo sed!
-                  Dignissimos quia ullam pariatur blanditiis sed voluptatum.
-                  Totam aut quidem laudantium tempora. Minima, saepe earum!
-                </p>
-                <div className="text-center">
-                  <div className="d-flex justify-content-center">
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="testimonial-item"
-              data-dot="<img class='img-fluid' src='img/testimonial-img-3.jpg' alt=''>"
-            >
-              <div className="testimonial-inner text-center p-5">
-                <div className="d-flex align-items-center justify-content-center mb-4">
-                  <div
-                    className="testimonial-inner-img border border-primary border-3 me-4"
-                    style={{ width: 100, height: 100, borderRadius: "50%" }}
-                  >
-                    <img
-                      src="img/testimonial-img-3.jpg"
-                      className="img-fluid rounded-circle"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <h5 className="mb-2">John Abraham</h5>
-                    <p className="mb-0">New York, USA</p>
-                  </div>
-                </div>
-                <p className="fs-7">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Asperiores nemo facilis tempora esse explicabo sed!
-                  Dignissimos quia ullam pariatur blanditiis sed voluptatum.
-                  Totam aut quidem laudantium tempora. Minima, saepe earum!
-                </p>
-                <div className="text-center">
-                  <div className="d-flex justify-content-center">
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                    <i className="fas fa-star text-primary" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Testimonial End */}
-      {/* Footer Start */}
-      <div
-        className="container-fluid footer py-5 wow fadeIn"
-        data-wow-delay="0.2s"
-      >
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item d-flex flex-column">
-                <h4 className="text-dark mb-4">Company</h4>
-                <a href> Why Mailler?</a>
-                <a href> Our Features</a>
-                <a href> Our Portfolio</a>
-                <a href> About Us</a>
-                <a href> Our Blog &amp; News</a>
-                <a href> Get In Touch</a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item d-flex flex-column">
-                <h4 className="mb-4 text-dark">Quick Links</h4>
-                <a href> About Us</a>
-                <a href> Contact Us</a>
-                <a href> Privacy Policy</a>
-                <a href> Terms &amp; Conditions</a>
-                <a href> Our Blog &amp; News</a>
-                <a href> Our Team</a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item d-flex flex-column">
-                <h4 className="mb-4 text-dark">Services</h4>
-                <a href> All Services</a>
-                <a href> Promotional Emails</a>
-                <a href> Product Updates</a>
-                <a href> Email Marketing</a>
-                <a href> Acquistion Emails</a>
-                <a href> Retention Emails</a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item d-flex flex-column">
-                <h4 className="mb-4 text-dark">Contact Info</h4>
-                <a href>
-                  <i className="fa fa-map-marker-alt me-2" /> 123 Street, New
-                  York, USA
-                </a>
-                <a href>
-                  <i className="fas fa-envelope me-2" /> info@example.com
-                </a>
-                <a href>
-                  <i className="fas fa-phone me-2" /> +012 345 67890
-                </a>
-                <a href className="mb-3">
-                  <i className="fas fa-print me-2" /> +012 345 67890
-                </a>
-                <div className="d-flex align-items-center">
-                  <i className="fas fa-share fa-2x text-secondary me-2" />
-                  <a
-                    className="btn-square btn btn-primary rounded-circle mx-1"
-                    href
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                  <a
-                    className="btn-square btn btn-primary rounded-circle mx-1"
-                    href
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a
-                    className="btn-square btn btn-primary rounded-circle mx-1"
-                    href
-                  >
-                    <i className="fab fa-instagram" />
-                  </a>
-                  <a
-                    className="btn-square btn btn-primary rounded-circle mx-1"
-                    href
-                  >
-                    <i className="fab fa-linkedin-in" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Footer End */}
-      {/* Copyright Start */}
-      <div className="container-fluid copyright py-4">
+      </div>	
+    </section>
+    <section>
+      <div className="gap no-bottom grey-bg nogap">
         <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-md-6 text-center text-md-start mb-md-0">
-              <span className="text-white">
-                <a href="#">
-                  <i className="fas fa-copyright text-light me-2" />
-                  Your Site Name
-                </a>
-                , All right reserved.
-              </span>
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="info-sec">
+                <i className="icofont-checked" />
+                <div>
+                  <h6>Learn from industry experts</h6>
+                  <p>Share your research, collaborate with your peers, and get the support you need to advance your career.</p>
+                </div>
+              </div>
             </div>
-            <div className="col-md-6 text-center text-md-end text-white">
-              {/*/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. *** /*/}
-              {/*/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, *** /*/}
-              {/*/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". *** /*/}
-              Designed By{" "}
-              <a className="border-bottom" href="https://htmlcodex.com">
-                HTML Codex
-              </a>{" "}
-              Distributed By{" "}
-              <a className="border-bottom" href="https://themewagon.com">
-                ThemeWagon
-              </a>
+            <div className="col-lg-4 col-md-6">
+              <div className="info-sec">
+                <i className="icofont-play-alt-1" />
+                <div>
+                  <h6>Find video Course of any topic</h6>
+                  <p>Share your research, collaborate with your peers, and get the support you need to advance your career.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="info-sec">
+                <i className="icofont-clock-time" />
+                <div>
+                  <h6>Go at your own pace</h6>
+                  <p>Share your research, collaborate with your peers, and get the support you need to advance your career.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Copyright End */}
-      {/* Back to Top */}
-      <a href="#" className="btn btn-primary btn-lg-square back-to-top">
-        <i className="fa fa-arrow-up" />
-      </a>
-    </div>
-  );
+    </section>
+    <section>
+      <div className="gap no-bottom">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="banner-full">
+                <div className="row">
+                  <div className="col-lg-3 col-md-3 col-sm-6">
+                    <div className="funfact-counter">
+                      <i className="icofont-air-ticket" />
+                      <span className="counter">599</span>
+                      <em>Researchers</em>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 col-sm-6">
+                    <div className="funfact-counter">
+                      <i className="icofont-network" />
+                      <span className="counter">299</span>
+                      <em>Registered user</em>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 col-sm-6">
+                    <div className="funfact-counter">
+                      <i className="icofont-network-tower" />
+                      <span className="counter">600</span>
+                      <em>Active People</em>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 col-sm-6">
+                    <div className="funfact-counter">
+                      <i className="icofont-microphone-alt" />
+                      <span className="counter">12</span>
+                      <em>Post Published</em>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>{/* funfacts */}
+    <section>
+      <div className="gap no-bottom">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7 col-md-7">
+              <div className="verticle-center">
+                <div className="measure">
+                  <i className="icofont-light-bulb" />
+                  <h2>Measure Your scientific impact</h2>
+                  <p>
+                    Get in depth stats on who's been reading your work and keep track of your citations. 
+                  </p>
+                </div>
+              </div>	
+            </div>
+            <div className="col-lg-5 col-md-5">
+              <figure className="side-image">
+                <img src="images/resources/research-avatar.jpg" alt />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className="gap">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5 col-md-5">
+              <figure className="side-image">
+                <img src="images/resources/research-avatar2.jpg" alt />
+              </figure>
+            </div>
+            <div className="col-lg-7 col-md-7">
+              <div className="verticle-center">
+                <div className="measure right">
+                  <i className="icofont-connection" />
+                  <h2>Connect with Your scientific Community</h2>
+                  <p>
+                    <a href="#" title>Engineering</a>
+                    <a href="#" title>mathamatic</a>
+                    <a href="#" title>biology</a>
+                    <a href="#" title>computer science</a>
+                    <a href="#" title>climate</a>
+                    <a href="#" title>medicine</a>
+                    <a href="#" title>Physics</a>
+                    <a href="#" title>sociology</a>
+                    <a href="#" title>chemistry</a>
+                    <a href="#" title>astrophysics</a>
+                  </p>
+                </div>	
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className="gap mate-black low-opacity">
+        <div className="bg-image" style={{backgroundImage: 'url(images/resources/paralex-bg.jpg)'}} data-velocity=".2" />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="welcome-parallax">
+                <i><img src="images/tv-icon.png" alt /></i>
+                <h2>Advance your research</h2>
+                <span>Join our community of scientists.</span>
+                <a href="#" title className="main-btn" data-ripple>Join Free Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>{/* parallax section */}
+    <section>
+      <div className="gap">
+        <div className="container">
+          <div className="row remove-ext30">
+            <div className="col-lg-12">
+              <div className="title">
+                <h1>Recent Events</h1>
+                <p>Our Recent News about the events.</p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="blog-grid">
+                <figure><img src="images/resources/blog.jpg" alt /></figure>
+                <div className="blog-meta">
+                  <div className="blog-head">
+                    <ul className="postby">
+                      <li>
+                        <figure><img src="images/resources/postby1.jpg" alt /></figure> 
+                        <span>Saden joe</span>
+                      </li>
+                      <li><i className="icofont-heart" /><span>1.3k</span></li>
+                    </ul>
+                    <a href="#" title className="date">06 Aug</a>
+                    <h4 className="blog-title"><a href="#" title>Oddo is coming to dubai in 2020</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="blog-grid">
+                <figure><img src="images/resources/blog2.jpg" alt /></figure>
+                <div className="blog-meta">
+                  <div className="blog-head">
+                    <ul className="postby">
+                      <li>
+                        <figure><img src="images/resources/postby2.jpg" alt /></figure> 
+                        <span>Andrew</span>
+                      </li>
+                      <li><i className="icofont-heart" /><span>1.3k</span></li>
+                    </ul>
+                    <a href="#" title className="date">08 Sep</a>
+                    <h4 className="blog-title"><a href="#" title>Coming soon event by Microsoft</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="blog-grid">
+                <figure><img src="images/resources/blog3.jpg" alt /></figure>
+                <div className="blog-meta">
+                  <div className="blog-head">
+                    <ul className="postby">
+                      <li>
+                        <figure><img src="images/resources/postby3.jpg" alt /></figure> 
+                        <span>Emma Lucy</span>
+                      </li>
+                      <li><i className="icofont-heart" /><span>1.3k</span></li>
+                    </ul>
+                    <a href="#" title className="date">12 Oct</a>
+                    <h4 className="blog-title"><a href="#" title>This year Whatsapp event is ready in July</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>{/* events */}
+    <section>
+      <div className="gap no-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="newsletter-sec">
+                <figure><img src="images/news-icon.png" alt /></figure>
+                <div className="leter-meta">
+                  <span>our newsletter</span>
+                  <h3>subscribe now</h3>
+                </div>	
+                <form method="post">
+                  <input type="text" placeholder="Email @" />
+                  <button type="submit" className="main-btn" data-ripple><i className="icofont-paper-plane" /></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className="gap no-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="title">
+                <h1>What our Students Have Today!</h1>
+                <p>Our Researchers have today now?</p>
+              </div>
+            </div>
+            <div className="col-lg-12">
+              <div className="student-review">
+                <div className="review-item">
+                  <figure><img src="images/resources/commenter-1.jpg" alt /></figure>
+                  <h6>Emma Watson</h6>
+                  <span>Student of Botony</span>
+                  <p>
+                    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.	 
+                  </p>
+                </div>
+                <div className="review-item">
+                  <figure><img src="images/resources/commenter-2.jpg" alt /></figure>
+                  <h6>Emma Watson</h6>
+                  <span>Student of Botony</span>
+                  <p>
+                    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.	 
+                  </p>
+                </div>
+                <div className="review-item">
+                  <figure><img src="images/resources/commenter-3.jpg" alt /></figure>
+                  <h6>Emma Watson</h6>
+                  <span>Student of Botony</span>
+                  <p>
+                    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.	 
+                  </p>
+                </div>
+                <div className="review-item">
+                  <figure><img src="images/resources/commenter-1.jpg" alt /></figure>
+                  <h6>Emma Watson</h6>
+                  <span>Student of Botony</span>
+                  <p>
+                    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.	 
+                  </p>
+                </div>
+                <div className="review-item">
+                  <figure><img src="images/resources/commenter-2.jpg" alt /></figure>
+                  <h6>Emma Watson</h6>
+                  <span>Student of Botony</span>
+                  <p>
+                    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.	 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div className="gap">
+        <div className="bg-image" style={{backgroundImage: 'url(images/resources/footer-bg.png)'}} />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="web-info">
+                <div className="logo"><img src="images/logo.png" alt /><span>Socimo</span></div>
+                <p>Subscribe our newsletter for getting notifications and alerts</p>
+                <div className="contact-little">
+                  <span><i className="icofont-phone-circle" /> +1-235-099-34</span>
+                  <span><i className="icofont-email" /> info@akedmic.com</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="widget">
+                <div className="widget-title">
+                  <h4>Company</h4>
+                </div>
+                <ul className="quick-links">
+                  <li><a href="#" title>About Us</a></li>
+                  <li><a href="#" title>Career</a></li>
+                  <li><a href="#" title>Privacy</a></li>
+                  <li><a href="#" title>Terms</a></li>
+                  <li><a href="#" title>FAQ</a></li>
+                  <li><a href="#" title>Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="widget">
+                <div className="widget-title">
+                  <h4>Quick Links</h4>
+                </div>
+                <ul className="quick-links">
+                  <li><a href="#" title>Product</a></li>
+                  <li><a href="#" title>Market</a></li>
+                  <li><a href="#" title>Courses</a></li>
+                  <li><a href="#" title>Services</a></li>
+                  <li><a href="#" title>Enterprise</a></li>
+                  <li><a href="#" title>Sitemap</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-2 col-md-4 col-sm-6">
+              <div className="widget">
+                <div className="widget-title">
+                  <h4>Follow Us</h4>
+                </div>
+                <ul className="quick-links">
+                  <li><a href="#" title><i className="icofont-facebook" />facebook</a></li>
+                  <li><a href="#" title><i className="icofont-twitter" />twitter</a></li>
+                  <li><a href="#" title><i className="icofont-instagram" />instagram</a></li>
+                  <li><a href="#" title><i className="icofont-google-plus" />google +</a></li>
+                  <li><a href="#" title><i className="icofont-whatsapp" />whatsapp</a></li>
+                  <li><a href="#" title><i className="icofont-reddit" />reddit</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="widget">
+                <div className="widget-title">
+                  <h4>Newsletter</h4>
+                </div>
+                <div className="news-lettr">
+                  <form className="newsletter">
+                    <input type="text" placeholder="Email Address" />
+                    <button type="submit"><i className="icofont-paper-plane" /></button>
+                  </form>
+                  <p>
+                    it is a long established fact that a reader will be distracted by.
+                  </p>
+                  <h5>Download App</h5>
+                  <a href="#" title><img src="images/android.png" alt /></a>
+                  <a href="#" title><img src="images/apple.png" alt /></a>
+                  <a href="#" title><img src="images/windows.png" alt /></a>
+                </div>	
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>{/* footer */}
+    <div className="bottombar">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <span className>© copyright All rights reserved by SBE 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>{/* bottombar */}
+  </div>
+  )
 }
+

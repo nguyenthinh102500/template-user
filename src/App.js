@@ -3,14 +3,14 @@ import './App.css';
 import {Route, Router, Switch } from 'react-router-dom'
 import {createBrowserHistory} from 'history';
 import Home from './page/Home/Home';
-import Admin from './page/Admin/Admin';
+import SignIn from './page/SignIn/SignIn';
 
 const history = createBrowserHistory()
 function App() {
   return (
     <Router history = {history}>
       <Switch>
-        <Route path="/admin" exact component = {Admin} />
+        <Route path="/signin" exact component = {SignIn} />
         <Route path="/" exact component = {Home} />
       </Switch>
     </Router>
