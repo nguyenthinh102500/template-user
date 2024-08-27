@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, NavLink } from "react-router-dom";
 export default function Home() {
   const history = useHistory();
+
+  const [showReload, setShowReload] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const loadScript = (src) => {
@@ -29,6 +32,17 @@ export default function Home() {
     };
   
     loadScripts();
+     // Hiển thị thông báo reload ngay lập tức
+     setShowReload(true);
+
+     // Ẩn thông báo reload sau 2 giây
+     const timer = setTimeout(() => {
+         setFadeOut(true);
+         setTimeout(() => {
+             setShowReload(false);
+             setFadeOut(false);
+         }, 1000); // Time for fade-out animation
+     }, 500);
   
     return () => {
       const scripts = document.querySelectorAll("script[src^='https://template-user-lime.vercel.app/js/']");
@@ -39,7 +53,11 @@ export default function Home() {
   }, []);
   return (
   <div className="theme-layout">
-    
+     {showReload && (
+                <div className={`reload-notification ${fadeOut ? 'fade-out' : ''}`}>
+                   <div className=" reload-notification  loader-1"></div>
+                </div>
+            )}
     <div className="responsive-header">
       <div className="logo res"><img src="images/logo.png" alt /><span>Socimo</span></div>
       <div className="user-avatar mobile">
