@@ -1,7 +1,45 @@
-  import React from 'react'
-  export default function Home() {
+import React, { useEffect } from "react";
+import { useHistory, NavLink } from "react-router-dom";
+export default function Home() {
+  const history = useHistory();
+
+  useEffect(() => {
+    const loadScript = (src) => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+      });
+    };
+  
+    const loadScripts = async () => {
+      try {
+        await loadScript("https://template-user-lime.vercel.app/js/main.min.js");
+        await loadScript("https://template-user-lime.vercel.app/js/script.js");
+        await loadScript("https://template-user-lime.vercel.app/js/date-time.js");
+        await loadScript("https://template-user-lime.vercel.app/js/counterup.min.js");
+        await loadScript("https://template-user-lime.vercel.app/js/counterup-t-waypoint.js");
+        await loadScript("https://template-user-lime.vercel.app/js/typed.js");
+      } catch (error) {
+        console.error("Error loading scripts", error);
+      }
+    };
+  
+    loadScripts();
+  
+    return () => {
+      const scripts = document.querySelectorAll("script[src^='https://template-user-lime.vercel.app/js/']");
+      scripts.forEach((script) => {
+        document.body.removeChild(script);
+      });
+    };
+  }, []);
   return (
   <div className="theme-layout">
+    
     <div className="responsive-header">
       <div className="logo res"><img src="images/logo.png" alt /><span>Socimo</span></div>
       <div className="user-avatar mobile">
@@ -82,7 +120,7 @@
           <li><a className="join-butn" href="feed.html" title>Today's Newsfeed</a></li>
           <li><a href="#" title>help</a></li>
           <li><a href="#" title><img src="images/flags/US.png" alt /></a></li>
-          <li><a href="sign-in.html" title>Login / Register</a></li>
+          <li><NavLink to="/signin" title>Login / Register</NavLink></li>
         </ul>
       </div>
     </header>

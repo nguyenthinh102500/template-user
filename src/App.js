@@ -5,7 +5,7 @@ import {createBrowserHistory} from 'history';
 import Home from './page/Home/Home';
 import SignIn from './page/SignIn/SignIn';
 
-const history = createBrowserHistory()
+export const history = createBrowserHistory()
 function App() {
   return (
     <Router history = {history}>
